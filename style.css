@@ -1,10 +1,10 @@
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1a1a1a;
-    color: #fff;
+    background-color: #f9f9f9;
+    color: #333;
     line-height: 1.6;
 }
 
@@ -16,26 +16,26 @@ body {
 }
 
 h1, h2, h3 {
-    color: #fff;
+    color: #333;
 }
 
 a {
     text-decoration: none;
-    color: #00ff88;
+    color: #007BFF;
 }
 
 a:hover {
-    color: #00cc66;
+    color: #0056b3;
 }
 
 /* Navigation Bar */
 nav {
-    background-color: #1a1a1a;
+    background-color: #fff;
     padding: 20px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav .container {
@@ -47,7 +47,7 @@ nav .container {
 nav .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #00ff88;
+    color: #333;
 }
 
 nav ul {
@@ -57,18 +57,18 @@ nav ul {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #333;
     font-size: 1.1rem;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #00ff88;
+    color: #007BFF;
 }
 
 /* Hero Section */
 #hero {
-    background: linear-gradient(135deg, #1a1a1a, #333);
+    background: linear-gradient(135deg, #f9f9f9, #e0e0e0);
     height: 100vh;
     display: flex;
     align-items: center;
@@ -80,7 +80,7 @@ nav ul li a:hover {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    border: 4px solid #00ff88;
+    border: 4px solid #007BFF;
     margin-bottom: 20px;
 }
 
@@ -99,20 +99,20 @@ nav ul li a:hover {
 }
 
 #hero .social-links a {
-    color: #fff;
+    color: #333;
     margin: 0 10px;
     font-size: 1.5rem;
     transition: color 0.3s;
 }
 
 #hero .social-links a:hover {
-    color: #00ff88;
+    color: #007BFF;
 }
 
 /* About Section */
 #about {
     padding: 100px 0;
-    background-color: #333;
+    background-color: #fff;
 }
 
 #about p {
@@ -123,7 +123,7 @@ nav ul li a:hover {
 /* Skills Section */
 #skills {
     padding: 100px 0;
-    background-color: #1a1a1a;
+    background-color: #f9f9f9;
 }
 
 .skills-grid {
@@ -136,7 +136,7 @@ nav ul li a:hover {
 .skill-item {
     text-align: center;
     padding: 20px;
-    background-color: #333;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -144,12 +144,12 @@ nav ul li a:hover {
 
 .skill-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 12px rgba(0, 255, 136, 0.2);
+    box-shadow: 0 8px 12px rgba(0, 123, 255, 0.2);
 }
 
 .skill-item i {
     font-size: 2.5rem;
-    color: #00ff88;
+    color: #007BFF;
     margin-bottom: 10px;
 }
 
@@ -161,7 +161,7 @@ nav ul li a:hover {
 /* Projects Section */
 #projects {
     padding: 100px 0;
-    background-color: #333;
+    background-color: #fff;
 }
 
 .projects-grid {
@@ -173,7 +173,7 @@ nav ul li a:hover {
 
 .project-item {
     padding: 20px;
-    background-color: #1a1a1a;
+    background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -181,7 +181,7 @@ nav ul li a:hover {
 
 .project-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 12px rgba(0, 255, 136, 0.2);
+    box-shadow: 0 8px 12px rgba(0, 123, 255, 0.2);
 }
 
 .project-item h3 {
@@ -197,20 +197,20 @@ nav ul li a:hover {
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #00ff88;
-    color: #1a1a1a;
+    background-color: #007BFF;
+    color: #fff;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
 .btn:hover {
-    background-color: #00cc66;
+    background-color: #0056b3;
 }
 
 /* Contact Section */
 #contact {
     padding: 100px 0;
-    background-color: #1a1a1a;
+    background-color: #f9f9f9;
     text-align: center;
 }
 
