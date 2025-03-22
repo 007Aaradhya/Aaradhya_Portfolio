@@ -3,80 +3,354 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aaradhya Agrawal - Portfolio</title>
+    <title>Aaradhya Agrawal | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <img src="photo.jpeg" alt="Aaradhya Agrawal" class="profile-photo">
-            <h1>Aaradhya Agrawal</h1>
-            <p>Explorer at Heart | Learning Beyond Boundaries</p>
+    <div class="cursor"></div>
+    <div class="navbar">
+        <div class="logo">
+            <span>A</span>aradhya
         </div>
-    </header>
+        <div class="menu-toggle" id="menuToggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
 
-    <section id="about">
-        <div class="container">
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="glitch-text" data-text="Aaradhya Agrawal">Aaradhya Agrawal</h1>
+                <div class="typing-container">
+                    <span id="typewriter"></span>
+                    <span class="cursor-typing"></span>
+                </div>
+                <p class="hero-description">Explorer at Heart | Learning Beyond Boundaries</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn-primary">Get In Touch</a>
+                    <a href="#projects" class="btn-secondary">View Projects</a>
+                </div>
+                <div class="social-icons">
+                    <a href="https://github.com/007Aaradhya" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/AaradhyaAgrawal" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:007aaradhya@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-container">
+                    <img src="photo.jpeg" alt="Aaradhya Agrawal">
+                    <div class="shape shape1"></div>
+                    <div class="shape shape2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <span>Scroll Down</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="section-title">
             <h2>About Me</h2>
-            <p>I’m a B.Tech student at UPES (2022-2026) but not someone who just sticks to tech. My journey is about curiosity, growth, and stepping out of comfort zones. Right now, I’m diving into DevOps, automation, and containerized applications, but my ambitions stretch far beyond that.</p>
-            <p>I don’t see myself as just a tech person—I want a career that’s dynamic, impactful, and gives me freedom. I’m open to exploring.</p>
+            <div class="underline"></div>
         </div>
-    </section>
-
-    <section id="experience">
-        <div class="container">
-            <h2>Experience</h2>
-            <div class="experience-item">
-                <h3>Intern - RANN Foundation</h3>
-                <p>June 2023 – July 2023</p>
-                <ul>
-                    <li>Contributed to Project PANKH – Menstrual Health and Hygiene, focusing on promoting awareness about menstrual health and hygiene.</li>
-                    <li>Engaged in community outreach and educational initiatives to support women’s health and empowerment.</li>
-                    <li>Collaborated with the team to develop impactful strategies for societal benefit.</li>
-                </ul>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="photo.jpeg" alt="Aaradhya Agrawal">
+                <div class="about-shape"></div>
+            </div>
+            <div class="about-text">
+                <h3>Who I Am Beyond the Code</h3>
+                <p>I'm a B.Tech student at UPES (2022-2026) passionate about exploring beyond traditional boundaries. My journey is driven by curiosity, growth, and stepping out of comfort zones.</p>
+                <p>Currently diving into DevOps, automation, and containerized applications, but my ambitions stretch far beyond that. I don't see myself as just a tech person—I want a career that's dynamic, impactful, and gives me freedom.</p>
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>B.Tech in Computer Science (2022-2026)</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-globe"></i>
+                        <span>Believe in Independence & Breaking Barriers</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-seedling"></i>
+                        <span>Spiritual, Disciplined & Growth-Focused</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-heart"></i>
+                        <span>Passionate About: Learning, freedom, deep conversations & making an impact</span>
+                    </div>
+                </div>
+                <a href="#contact" class="btn-primary">Let's Connect</a>
             </div>
         </div>
     </section>
 
-    <section id="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <ul>
-                <li>Languages: Python, HTML/CSS</li>
-                <li>Developer Tools: VS Code, Eclipse, AWS</li>
-                <li>Technologies/Frameworks: Linux, GitHub</li>
-            </ul>
+    <section id="experience" class="experience">
+        <div class="section-title">
+            <h2>Experience & Education</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">June 2023 - July 2023</div>
+                    <h3>Intern at RANN Foundation</h3>
+                    <p>Contributed to Project PANKH – Menstrual Health and Hygiene, focusing on promoting awareness about menstrual health and hygiene.</p>
+                    <p>Engaged in community outreach and educational initiatives to support women's health and empowerment.</p>
+                    <p>Collaborated with the team to develop impactful strategies for societal benefit.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">2022 - 2026 (Pursuing)</div>
+                    <h3>Bachelor of Technology in Computer Science Engineering</h3>
+                    <p>University of Petroleum and Energy Studies, Dehradun</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">2021 - 2022</div>
+                    <h3>CBSE Higher Secondary Certificate</h3>
+                    <p>Rajiv International School, Mathura</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">2019 - 2020</div>
+                    <h3>CBSE Secondary School Certificate</h3>
+                    <p>Rajiv International School, Mathura</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="projects">
-        <div class="container">
+    <section id="projects" class="projects">
+        <div class="section-title">
             <h2>Projects</h2>
-            <div class="project-item">
-                <h3>Dockers-World</h3>
-                <p>All Docker experiments are available here.</p>
-                <a href="https://github.com/007Aaradhya/Dockers-World" target="_blank">View on GitHub</a>
+            <div class="underline"></div>
+        </div>
+        <div class="projects-container">
+            <div class="project-card">
+                <div class="project-img">
+                    <div class="project-overlay">
+                        <i class="fab fa-docker"></i>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Dockers-World</h3>
+                    <p>A comprehensive collection of Docker experiments showcasing containerization technologies, deployment strategies, and DevOps practices.</p>
+                    <div class="project-tags">
+                        <span>Docker</span>
+                        <span>DevOps</span>
+                        <span>Containerization</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/007Aaradhya/Dockers-World" target="_blank" class="btn-project">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
             </div>
-            <div class="project-item">
-                <h3>Soloback-Packers</h3>
-                <p>A website where solo travelers can choose trips based on their budget, destination, or group preferences.</p>
+            <div class="project-card">
+                <div class="project-img">
+                    <div class="project-overlay">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Three Tier Architecture Implementation - AWS</h3>
+                    <p>SoloBack-Packers: A website where solo travelers can choose trips based on their budget, destination, or group preferences (all-females, all-males, co-ed).</p>
+                    <div class="project-tags">
+                        <span>AWS</span>
+                        <span>Cloud</span>
+                        <span>Web Development</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn-project">Coming Soon <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>Email: 007aaradhya@gmail.com</p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/AaradhyaAgrawal" target="_blank">linkedin.com/in/AaradhyaAgrawal</a></p>
-            <p>GitHub: <a href="https://github.com/AaradhyaAgrawal" target="_blank">github.com/AaradhyaAgrawal</a></p>
+    <section id="skills" class="skills">
+        <div class="section-title">
+            <h2>Skills & Certifications</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="skills-container">
+            <div class="skills-category">
+                <h3>Technical Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <h4>Python</h4>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <h4>HTML/CSS</h4>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <h4>AWS</h4>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <h4>GitHub</h4>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fab fa-linux"></i>
+                        </div>
+                        <h4>Linux</h4>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4>VS Code</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="certifications">
+                <h3>Certifications</h3>
+                <div class="cert-list">
+                    <div class="cert-item">
+                        <div class="cert-icon">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <div class="cert-details">
+                            <h4>AWS Cloud Semester 1</h4>
+                            <p>AWS</p>
+                        </div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-icon">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <div class="cert-details">
+                            <h4>AWS SKILL BUILDER CLOUD QUEST</h4>
+                            <p>AWS</p>
+                        </div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-icon">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <div class="cert-details">
+                            <h4>AWS SKILL BUILDER CLOUD PRACTITIONER BASICS</h4>
+                            <p>AWS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="achievements">
+            <h3>Achievements</h3>
+            <div class="achievement-item">
+                <div class="achievement-icon">
+                    <i class="fas fa-medal"></i>
+                </div>
+                <p>Gold Medalist in Basketball and Football at school-level tournaments (2019)</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="section-title">
+            <h2>Get In Touch</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Let's Connect</h3>
+                <p>Feel free to reach out for collaborations, opportunities, or just a friendly chat!</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:007aaradhya@gmail.com">007aaradhya@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+917060409985">+91 7060409985</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://linkedin.com/in/AaradhyaAgrawal" target="_blank">linkedin.com/in/AaradhyaAgrawal</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/007Aaradhya" target="_blank">github.com/007Aaradhya</a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        <label for="subject">Subject</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="btn-submit">Send Message <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
         </div>
     </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2023 Aaradhya Agrawal</p>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span>A</span>aradhya
+            </div>
+            <p>&copy; 2025 Aaradhya Agrawal. All Rights Reserved.</p>
+            <div class="footer-social">
+                <a href="https://github.com/007Aaradhya" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/AaradhyaAgrawal" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:007aaradhya@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
         </div>
     </footer>
+
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
