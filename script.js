@@ -224,33 +224,83 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', checkInView);
     checkInView(); // Check on initial load
 });
-// Page switching functionality
+// Modified navigation functionality
 document.addEventListener('DOMContentLoaded', () => {
-    const navLinks = document.querySelectorAll('.nav-links a');
-    const pages = document.querySelectorAll('.page');
+    const navbar = document.querySelector('.navbar');
+    const backToTop = document.getElementById('backToTop');
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    const allNavLinks = document.querySelectorAll('.nav-links a');
+    const sections = document.querySelectorAll('section');
     
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+    // Navigation click handler - FIXED VERSION
+    document.querySelectorAll('.nav-links a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
             
-            // Remove active class from all pages and add to target
-            pages.forEach(page => {
-                page.classList.remove('active');
-            });
-            document.getElementById(targetId).classList.add('active');
+            if (targetSection) {
+                // Remove active class from all sections
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                });
+                
+                // Add active class to target section
+                targetSection.classList.add('active');
+                
+                // Update active state in navigation
+                allNavLinks.forEach(link => {
+                    link.classList.remove('active');
+                });
+                this.classList.add('active');
+                
+                // Scroll to top
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
             
-            // Update active link in navigation
-            navLinks.forEach(navLink => {
-                navLink.classList.remove('active');
-            });
-            this.classList.add('active');
-            
-            // Scroll to top of the section
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            // Close mobile menu after clicking
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                menuToggle.classList.remove('active');
+            }
         });
     });
+
+    // Menu toggle for mobile
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    // Back to top button click handler
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // Back to top button visibility
+    function handleScrollEvents() {
+        // Navbar shrink on scroll
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        
+        // Back to top button visibility
+        if (window.scrollY > 300) {
+            backToTop.classList.add('visible');
+        } else {
+            backToTop.classList.remove('visible');
+        }
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScrollEvents);
 });
