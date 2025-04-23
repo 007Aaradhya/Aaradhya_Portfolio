@@ -224,45 +224,37 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', checkInView);
     checkInView(); // Check on initial load
 });
-// Modified navigation functionality
+// Fixed navigation functionality
 document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.querySelector('.navbar');
     const backToTop = document.getElementById('backToTop');
     const menuToggle = document.getElementById('menuToggle');
     const navLinks = document.getElementById('navLinks');
     const allNavLinks = document.querySelectorAll('.nav-links a');
-    const sections = document.querySelectorAll('section');
+    const sections = document.querySelectorAll('.page');
     
-    // Navigation click handler - FIXED VERSION
-    document.querySelectorAll('.nav-links a').forEach(anchor => {
+    // Navigation click handler - FIXED
+    allNavLinks.forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             const targetSection = document.querySelector(targetId);
             
             if (targetSection) {
-                // Remove active class from all sections
-                sections.forEach(section => {
-                    section.classList.remove('active');
+                // Scroll to section
+                window.scrollTo({
+                    top: targetSection.offsetTop - 80,
+                    behavior: 'smooth'
                 });
                 
-                // Add active class to target section
-                targetSection.classList.add('active');
-                
-                // Update active state in navigation
+                // Update active nav link
                 allNavLinks.forEach(link => {
                     link.classList.remove('active');
                 });
                 this.classList.add('active');
-                
-                // Scroll to top
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
             }
             
-            // Close mobile menu after clicking
+            // Close mobile menu
             if (navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
                 menuToggle.classList.remove('active');
@@ -276,7 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.classList.toggle('active');
     });
 
-    // Back to top button click handler
+    // Back to top button
     backToTop.addEventListener('click', () => {
         window.scrollTo({
             top: 0,
@@ -284,23 +276,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Back to top button visibility
-    function handleScrollEvents() {
-        // Navbar shrink on scroll
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
+    // Scroll events for navbar effects
+    window.addEventListener('scroll', () => {
+        // Navbar shrink
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
         
-        // Back to top button visibility
-        if (window.scrollY > 300) {
-            backToTop.classList.add('visible');
-        } else {
-            backToTop.classList.remove('visible');
-        }
-    }
-
-    // Add scroll event listener
-    window.addEventListener('scroll', handleScrollEvents);
+        // Back to top visibility
+        backToTop.classList.toggle('visible', window.scrollY > 300);
+        
+        // Highlight current section in nav
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 100;
+            if (window.scrollY >= sectionTop) {
+                current = section.getAttribute('id');
+            }
+        });
+        
+        allNavLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + current) {
+                link.classList.add('active');
+            }
+        });
+    });
 });
