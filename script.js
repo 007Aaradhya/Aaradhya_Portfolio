@@ -224,3 +224,33 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', checkInView);
     checkInView(); // Check on initial load
 });
+// Page switching functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const pages = document.querySelectorAll('.page');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            
+            // Remove active class from all pages and add to target
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(targetId).classList.add('active');
+            
+            // Update active link in navigation
+            navLinks.forEach(navLink => {
+                navLink.classList.remove('active');
+            });
+            this.classList.add('active');
+            
+            // Scroll to top of the section
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    });
+});
